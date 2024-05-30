@@ -17,13 +17,14 @@ export default function Login(props) {
         props.navigation.navigate('Home');
     } catch (error) {
         console.log(error);
+        Alert.alert('Error al iniciar sesión');
     }
   
   };
   return (
     <View style={styles.padre}>
       <View>
-        <Image source={require('../assets/chelsea.png')} style={styles.profile} />
+        <Image source={require('../assets/user.jpg')} style={styles.profile} />
       </View>
 
       <View style={styles.tarjeta}>
@@ -49,46 +50,61 @@ export default function Login(props) {
 }
 
 const styles = StyleSheet.create({
-  padre: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  tarjeta: {
-    margin: 20,
-    padding: 100,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    width: '90%',
-    height: '60%',
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.5,
-    shadowRadius: 4,
-  },
-  profile: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 100,
-    marginBottom: 100,
-    alignSelf: 'center',
-    backgroundColor: 'salmon',
-  },
   input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
+      height: 40,
+      margin: 12,
+      borderWidth: 1,
+      padding: '10px',
+      
+
   },
+
+  padre: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100%',
+      width: '100%',
+      
+  },
+
+  profile: {
+      width: 200,
+      height: 200,
+      borderRadius: 100,
+      marginBottom: 20,
+      backgroundColor: 'white',
+  },
+
   botonSesion: {
-    backgroundColor: 'salmon',
-    padding: 10,
-    borderRadius: 5,
-    alignItems: 'center',
+      backgroundColor: 'skyblue', 
+      padding: 10,
+      borderRadius: 5,
+      alignItems: 'center', 
+      marginTop: 10,
+},
+
+textoBoton: {
+  color: 'black',
+  textAlign: 'center',
+  
+},
+tarjeta : {
+  width: '25%',
+  height: '40%',
+  backgroundColor: 'rgb(243, 238, 234)',
+  borderRadius: 10,
+  alignItems: 'center',
+  justifyContent: 'center',
+  shadowColor: 'rgb(82, 82, 247)',
+  shadowOffset: {
+    width: 5,
+    height: 5,
   },
-  textoBoton: {
-    color: 'white',
-  },
+  shadowOpacity: 0.55,
+  shadowRadius: 3.84,
+  elevation: 5,
+}
+
 });
