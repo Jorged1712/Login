@@ -1,6 +1,6 @@
 import {getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
-import { StyleSheet, View, Image, TextInput, TouchableOpacity, Text, Alert } from 'react-native';
+import { StyleSheet, View, Image, TextInput, TouchableOpacity, Text, Alert, Keyboard , TouchableWithoutFeedback} from 'react-native';
 import appFirebase from '../credenciales';
 
 const auth = getAuth(appFirebase);
@@ -22,6 +22,7 @@ export default function Login(props) {
   
   };
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
     <View style={styles.padre}>
       <View>
         <Image source={require('../assets/user.jpg')} style={styles.profile} />
@@ -46,6 +47,7 @@ export default function Login(props) {
         </TouchableOpacity>
       </View>
     </View>
+    </TouchableWithoutFeedback>
   );
 }
 
