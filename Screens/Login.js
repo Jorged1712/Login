@@ -52,9 +52,12 @@ export default function Login(props) {
 const styles = StyleSheet.create({
   input: {
       height: 40,
+      width: '80%',
       margin: 12,
       borderWidth: 1,
       padding: '10px',
+      borderRadius: '15px',
+      paddingLeft: 10,
       
 
   },
@@ -91,12 +94,14 @@ textoBoton: {
   
 },
 tarjeta : {
-  width: '25%',
+  width: '65%',
+  marginBottom: 200,
   height: '40%',
   backgroundColor: 'rgb(243, 238, 234)',
   borderRadius: 10,
   alignItems: 'center',
-  justifyContent: 'center',
+  paddingTop: 30,
+  
   shadowColor: 'rgb(82, 82, 247)',
   shadowOffset: {
     width: 5,
