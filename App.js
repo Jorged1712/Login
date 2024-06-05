@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './Screens/Login';
 import Home from './Screens/Home';
+import Register from './Screens/Register.js';
 
 export default function App() {
 
@@ -27,6 +28,10 @@ export default function App() {
             headerTitleAlign: "center",
             headerStyle: { backgroundColor: 'skyblue' },
           }} />
+
+          <Stack.Screen name="Register" component={Register}/>
+
+    
       </Stack.Navigator>
     );
   }
